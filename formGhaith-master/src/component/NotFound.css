@@ -1,0 +1,47 @@
+#svgWrap_1,
+#svgWrap_2 {
+  max-width: 50%;
+  max-height: 50%;
+  padding: 7%;
+  padding-bottom: 3%;
+}
+.svgcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-direction: column;
+}
+.svgcon h3 {
+  animation: moveText 3s ease-in-out forwards;
+}
+#id1_2,
+#id2_2,
+#id3_2 {
+  stroke: #12000a;
+  stroke-width: 3px;
+  fill: transparent;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: movePath 3s ease-in-out infinite;
+}
+
+@keyframes movePath {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes moveText {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
